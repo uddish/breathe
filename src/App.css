@@ -134,7 +134,7 @@ body {
 .in-text {
   font-size: 5rem;
   position: absolute;
-  left: 40%;
+  /* left: 50%; */
   bottom: 25%;
   opacity: 0;
   color: #015871;
