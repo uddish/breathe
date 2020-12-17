@@ -154,3 +154,9 @@ body {
   animation: bottomFadeOut 12s infinite;
   animation-delay: 6s;
 }
+
+.img  {
+  position: absolute;
+  right: 0px;
+  padding: 20px;
+}
