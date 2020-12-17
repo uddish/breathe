@@ -1,0 +1,156 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* WAVES */
+html, body { height: 100%; }
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  overflow: hidden;
+  font-size: 62.5%;
+}
+
+.ocean { 
+  height: 15%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 298px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+/* Text Animation */
+.animation-box {
+  width: 75%;
+  height: 27.5rem;
+  /* background-color: blue; */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.animation-container {
+  width: 1000rem;
+  height: 30rem;
+}
+
+@keyframes bottomFadeOut {
+  0% {
+    position: absolute;
+    bottom: -5rem;
+    opacity: 0;
+  }
+
+  16% {
+    position: absolute;
+    bottom: 25%;
+    opacity: 1;
+  }
+  33% {
+    position: absolute;
+    bottom: 25%;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+    /* 0% {opacity: 0; height: auto;}
+    16% {opacity: 1; bottom: 25%;}
+    33% {opacity: 0; bottom: 25%;}
+    100% {opacity: 0; bottom: 25%;} */
+  
+}
+.in-text {
+  font-size: 5rem;
+  position: absolute;
+  left: 40%;
+  bottom: 25%;
+  opacity: 0;
+  color: #015871;
+  animation: bottomFadeOut 12s infinite;
+  /* animation-name: bottomFadeOut;
+  animation-delay: 6s;
+  animation-duration: 6s; */
+}
+
+.out-text {
+  font-size: 5rem;
+  position: absolute;
+  left: 40%;
+  bottom: 25%;
+  opacity: 0;
+  color: #015871;
+  animation: bottomFadeOut 12s infinite;
+  animation-delay: 6s;
+}
